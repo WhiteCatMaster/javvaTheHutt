@@ -233,7 +233,8 @@ class Scanner {
       advance();
     String text = source.substring(start, current);
 
-    // Language switch directive: writing "us", "es", or "kr" changes the active language
+    // Language switch directive: writing "us", "es", or "kr" changes the active
+    // language
     if (LANG_CODES.containsKey(text)) {
       setLanguage(LANG_CODES.get(text));
       return;
@@ -250,6 +251,12 @@ class Scanner {
       advance();
       while (isDigit(peek()))
         advance();
+      if (isDigit(peek())) {
+        advance();
+        while (isDigit(peek())) {
+          advance();
+        }
+      }
     }
     addToken(NUMBER, Double.parseDouble(source.substring(start, current)));
   }
@@ -291,8 +298,8 @@ class Scanner {
 
   private boolean isAlpha(char c) {
     return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_'
-        || (c >= '가' && c <= '힣')  // Hangul syllables
-        || (c >= 'ᄀ' && c <= 'ᇿ')  // Hangul Jamo
+        || (c >= '가' && c <= '힣') // Hangul syllables
+        || (c >= 'ᄀ' && c <= 'ᇿ') // Hangul Jamo
         || (c >= '㄰' && c <= '㆏'); // Hangul Compatibility Jamo
   }
 
