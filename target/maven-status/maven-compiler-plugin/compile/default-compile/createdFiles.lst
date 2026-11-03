@@ -3,3 +3,4 @@ com/javva/Scanner.class
 com/javva/Token.class
 com/javva/TokenType.class
 com/javva/Language.class
+com/javva/Scanner$1.class

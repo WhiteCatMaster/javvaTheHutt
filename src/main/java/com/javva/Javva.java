@@ -38,7 +38,7 @@ public class Javva {
 
     for (;;) {
 
-      if (rythm < 3) {
+      if (rythm < 2) {
         System.out.print("taaaan > ");
         rythm++;
       } else {
@@ -46,7 +46,6 @@ public class Javva {
         rythm = 0;
       }
 
-      System.out.print("taaaan > ");
       String line = reader.readLine();
       if (line == null)
         break;
