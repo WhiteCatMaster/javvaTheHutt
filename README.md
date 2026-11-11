@@ -1,4 +1,6 @@
 # javvaTheHutt
+<img width="1080" height="1080" alt="javva" src="https://github.com/user-attachments/assets/1170a9e9-c1f4-4615-a242-51f96ac42f74" />
+
 javva the hutt is a student project taking base in JLox interpreter , it doesnt look to be usefull at all, neither fun to use, just fun to program ( for me ) 
 
 # Scanner
